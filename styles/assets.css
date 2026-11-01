@@ -1,0 +1,290 @@
+/* =========================================================
+   assets.css — design tokens + reusable utility classes
+   ========================================================= */
+
+:root {
+  /* ---- Colors ---- */
+  --bg:            #0b0f14;
+  --bg-glow-1:     rgba(163, 230, 53, 0.08);
+  --bg-glow-2:     rgba(255, 138, 61, 0.07);
+  --surface:       #121821;
+  --surface-2:     #18202b;
+  --surface-3:     #222c39;
+  --border:        #263142;
+
+  --text:          #e6edf3;
+  --text-soft:     #b3bfcc;
+  --text-muted:    #7d8a99;
+
+  --accent:        #a3e635;   /* salad / lime */
+  --accent-dim:    rgba(163, 230, 53, 0.14);
+  --orange:        #ff8a3d;
+  --orange-dim:    rgba(255, 138, 61, 0.14);
+
+  /* ---- Type ---- */
+  --font-sans: "Inter", "Noto Sans Georgian", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --fs-xs:   0.75rem;
+  --fs-sm:   0.875rem;
+  --fs-base: 0.9375rem;
+  --fs-md:   1.0625rem;
+  --fs-lg:   1.25rem;
+  --fs-xl:   clamp(2rem, 1.4rem + 2.6vw, 3rem);
+
+  /* ---- Spacing / shape ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+
+  --radius-sm: 6px;
+  --radius:    14px;
+  --radius-lg: 20px;
+
+  --shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.6);
+  --transition: 0.25s ease;
+}
+
+/* ---------- Card ---------- */
+.card {
+  background: linear-gradient(180deg, var(--surface-2) 0%, var(--surface) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-5);
+  box-shadow: var(--shadow);
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.card:hover {
+  border-color: #34425a;
+}
+
+/* ---------- Text utilities ---------- */
+.text-accent { color: var(--accent); }
+.text-orange { color: var(--orange); }
+.text-muted  { color: var(--text-muted); font-size: var(--fs-sm); }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* ---------- Section title ---------- */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--border), transparent);
+}
+
+.section-title__num {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--orange);
+  padding: 2px 6px;
+  border: 1px solid var(--orange-dim);
+  border-radius: var(--radius-sm);
+  background: var(--orange-dim);
+}
+
+/* ---------- Badge ---------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-soft);
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--surface-3);
+  border: 1px solid var(--border);
+}
+
+.badge--accent {
+  color: var(--accent);
+  background: var(--accent-dim);
+  border-color: rgba(163, 230, 53, 0.3);
+}
+
+/* ---------- Tags ---------- */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.tag {
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: var(--text-soft);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-3);
+  border: 1px solid var(--border);
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.tag:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ---------- Progress bar ---------- */
+.progress {
+  position: relative;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--surface-3);
+  overflow: hidden;
+}
+
+.progress__bar {
+  display: block;
+  height: 100%;
+  width: var(--level, 50%);
+  border-radius: inherit;
+  background: linear-gradient(90deg, #65a30d, var(--accent));
+  box-shadow: 0 0 12px rgba(163, 230, 53, 0.45);
+  animation: progress-fill 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.progress__bar--orange {
+  background: linear-gradient(90deg, #ea580c, var(--orange));
+  box-shadow: 0 0 12px rgba(255, 138, 61, 0.45);
+}
+
+@keyframes progress-fill {
+  from { width: 0; }
+}
+
+/* ---------- Rating dots (uses --filled on parent) ---------- */
+.dots {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.dots i {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--surface-3);
+  border: 1px solid var(--border);
+}
+
+.dots i:nth-child(1) { --n: 1; }
+.dots i:nth-child(2) { --n: 2; }
+.dots i:nth-child(3) { --n: 3; }
+.dots i:nth-child(4) { --n: 4; }
+.dots i:nth-child(5) { --n: 5; }
+
+.dots i::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px rgba(163, 230, 53, 0.5);
+  /* 1 when n <= filled, 0 otherwise */
+  opacity: clamp(0, calc(var(--filled, 0) - var(--n) + 1), 1);
+}
+
+/* ---------- Lists ---------- */
+.list-dash li,
+.list-check li {
+  position: relative;
+  padding-left: var(--space-5);
+  color: var(--text-soft);
+  font-size: var(--fs-sm);
+}
+
+.list-dash li + li,
+.list-check li + li {
+  margin-top: var(--space-2);
+}
+
+.list-dash li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0.7em;
+  width: 8px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.list-check li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+/* ---------- Language switch ---------- */
+.lang-switch {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  border-radius: 999px;
+  background: var(--surface-3);
+  border: 1px solid var(--border);
+}
+
+.lang-switch a {
+  min-width: 36px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-align: center;
+  font-family: var(--font-mono), "Noto Sans Georgian", sans-serif;
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  transition: color var(--transition), background var(--transition);
+}
+
+.lang-switch a:hover {
+  color: var(--text);
+}
+
+.lang-switch a[aria-current="page"] {
+  color: var(--bg);
+  background: var(--accent);
+  font-weight: 600;
+}
+
+/* ---------- Status dot ---------- */
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-left: var(--space-2);
+  border-radius: 50%;
+  background: var(--accent);
+  vertical-align: middle;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(163, 230, 53, 0.6); }
+  70%  { box-shadow: 0 0 0 8px rgba(163, 230, 53, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(163, 230, 53, 0); }
+}

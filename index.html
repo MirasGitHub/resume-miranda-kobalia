@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Miranda Kobalia — Front-End Developer (Web & Mobile). Resume." />
+  <title>Miranda Kobalia — Front-End Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Noto+Sans+Georgian:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/assets.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <main class="resume">
+
+    <!-- ============ HEADER ============ -->
+    <header class="hero card">
+      <nav class="lang-switch" aria-label="Language">
+        <a href="index.html" lang="en" aria-current="page">EN</a>
+        <a href="ka.html" lang="ka">ქა</a>
+      </nav>
+
+      <div class="hero__avatar" aria-hidden="true">AM</div>
+
+      <div class="hero__info">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1 class="hero__name">Miranda Kobalia</h1>
+        <p class="hero__role">
+          Front-End Developer <span class="text-accent">/</span> Web &amp; Mobile
+        </p>
+        <p class="hero__summary">
+          Front-end developer with 3+ years of experience building fast, accessible web
+          applications and cross-platform mobile apps. I enjoy turning complex product
+          ideas into clean, pixel-perfect interfaces and maintainable component systems.
+        </p>
+      </div>
+
+      <ul class="hero__contacts">
+        <li>
+          <a class="contact" href="mailto:kobaliamiranda1@gmail.com">
+            <span class="contact__icon">@</span>kobaliamiranda1@gmail.com
+          </a>
+        </li>
+        <li>
+          <a class="contact" href="tel:+995557420520">
+            <span class="contact__icon">☏</span>+995 557 420 520
+          </a>
+        </li>
+        <li>
+          <span class="contact">
+            <span class="contact__icon">⌖</span>Tbilisi, Georgia
+          </span>
+        </li>
+        <li>
+          <a class="contact" href="https://github.com/MirasGitHub" target="_blank" rel="noopener">
+            <span class="contact__icon">&lt;/&gt;</span>github.com/MirasGitHub
+          </a>
+        </li>
+        <li>
+          <a class="contact" href="https://linkedin.com/in/miranda-kobalia-b369141b6" target="_blank" rel="noopener">
+            <span class="contact__icon">in</span>linkedin.com/in/miranda-kobalia-b369141b6
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats" aria-label="Highlights">
+      <div class="stat card">
+        <span class="stat__value text-accent">3+</span>
+        <span class="stat__label">Years experience</span>
+      </div>
+      <div class="stat card">
+        <span class="stat__value text-orange">25+</span>
+        <span class="stat__label">Projects shipped</span>
+      </div>
+      <div class="stat card">
+        <span class="stat__value text-accent">4</span>
+        <span class="stat__label">Mobile apps in stores</span>
+      </div>
+      <div class="stat card">
+        <span class="stat__value text-orange">98</span>
+        <span class="stat__label">Avg. Lighthouse score</span>
+      </div>
+    </section>
+
+    <div class="layout">
+
+      <!-- ============ SIDEBAR ============ -->
+      <aside class="sidebar">
+
+        <section class="card">
+          <h2 class="section-title"><span class="section-title__num">01</span>Technical Skills</h2>
+
+          <ul class="skills">
+            <li class="skill" style="--level: 95%">
+              <div class="skill__head"><span>HTML5 / CSS3 / SCSS</span><span class="skill__pct">95%</span></div>
+              <div class="progress"><span class="progress__bar"></span></div>
+            </li>
+            <li class="skill" style="--level: 90%">
+              <div class="skill__head"><span>JavaScript (ES6+)</span><span class="skill__pct">90%</span></div>
+              <div class="progress"><span class="progress__bar"></span></div>
+            </li>
+            <li class="skill" style="--level: 85%">
+              <div class="skill__head"><span>React</span><span class="skill__pct">85%</span></div>
+              <div class="progress"><span class="progress__bar"></span></div>
+            </li>
+            <li class="skill" style="--level: 80%">
+              <div class="skill__head"><span>React Native</span><span class="skill__pct">80%</span></div>
+              <div class="progress"><span class="progress__bar"></span></div>
+            </li>
+            <li class="skill" style="--level: 75%">
+              <div class="skill__head"><span>TypeScript</span><span class="skill__pct">75%</span></div>
+              <div class="progress"><span class="progress__bar progress__bar--orange"></span></div>
+            </li>
+            <li class="skill" style="--level: 65%">
+              <div class="skill__head"><span>Next.js</span><span class="skill__pct">65%</span></div>
+              <div class="progress"><span class="progress__bar progress__bar--orange"></span></div>
+            </li>
+            <li class="skill" style="--level: 60%">
+              <div class="skill__head"><span>PHP / REST APIs</span><span class="skill__pct">60%</span></div>
+              <div class="progress"><span class="progress__bar progress__bar--orange"></span></div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title"><span class="section-title__num">02</span>Tools &amp; Libraries</h2>
+          <ul class="tags">
+            <li class="tag">Redux Toolkit</li>
+            <li class="tag">React Query</li>
+            <li class="tag">Tailwind</li>
+            <li class="tag">Vite</li>
+            <li class="tag">Webpack</li>
+            <li class="tag">Expo</li>
+            <li class="tag">Jest</li>
+            <li class="tag">Git</li>
+            <li class="tag">GitLab CI</li>
+            <li class="tag">Figma</li>
+            <li class="tag">jQuery</li>
+            <li class="tag">Chart.js</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title"><span class="section-title__num">03</span>Languages</h2>
+          <ul class="langs">
+            <li class="lang">
+              <span>English</span>
+              <span class="dots" style="--filled: 5" aria-label="5 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+            </li>
+            <li class="lang">
+              <span>Georgian</span>
+              <span class="dots" style="--filled: 5" aria-label="5 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+            </li>
+            <li class="lang">
+              <span>German</span>
+              <span class="dots" style="--filled: 3" aria-label="3 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title"><span class="section-title__num">04</span>Soft Skills</h2>
+          <ul class="list-check">
+            <li>Clear async communication</li>
+            <li>Mentoring junior developers</li>
+            <li>Ownership &amp; problem solving</li>
+            <li>Working with designers &amp; PMs</li>
+          </ul>
+        </section>
+      </aside>
+
+      <!-- ============ MAIN CONTENT ============ -->
+      <div class="content">
+
+        <section class="card">
+          <h2 class="section-title"><span class="section-title__num">05</span>Experience</h2>
+
+          <ol class="timeline">
+            <li class="timeline__item">
+              <div class="timeline__head">
+                <h3 class="timeline__role">Front-End Developer</h3>
+                <span class="badge badge--accent">2024 — Present</span>
+              </div>
+              <p class="timeline__company">Brightline Software · Tbilisi</p>
+              <ul class="list-dash">
+                <li>Lead front-end development of a React Native kiosk app used on 300+ tablets, including an in-app self-update flow.</li>
+                <li>Built a reusable component library in React + SCSS, cutting new-screen development time by ~35%.</li>
+                <li>Set up GitLab CI pipelines for automated testing and staged releases.</li>
+              </ul>
+            </li>
+
+            <li class="timeline__item">
+              <div class="timeline__head">
+                <h3 class="timeline__role">Junior Front-End Developer</h3>
+                <span class="badge">2022 — 2024</span>
+              </div>
+              <p class="timeline__company">Pixel Harbor Agency · Remote</p>
+              <ul class="list-dash">
+                <li>Delivered 15+ responsive marketing sites and dashboards for international clients.</li>
+                <li>Improved Core Web Vitals across key client pages, raising Lighthouse performance from 62 to 95.</li>
+                <li>Integrated REST APIs and interactive data visualisations with Chart.js.</li>
+              </ul>
+            </li>
+
+            <li class="timeline__item">
+              <div class="timeline__head">
+                <h3 class="timeline__role">Front-End Intern</h3>
+                <span class="badge">2021 — 2022</span>
+              </div>
+              <p class="timeline__company">Nova Labs · Tbilisi</p>
+              <ul class="list-dash">
+                <li>Converted Figma designs into semantic, accessible HTML/CSS templates.</li>
+                <li>Fixed cross-browser layout bugs and maintained jQuery-based UI widgets.</li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title"><span class="section-title__num">06</span>Featured Projects</h2>
+
+          <div class="projects">
+            <article class="project">
+              <span class="project__type text-accent">Mobile · React Native</span>
+              <h3 class="project__title">FitTrack</h3>
+              <p class="project__desc">Workout tracking app with offline sync, charts and push reminders. 10k+ downloads.</p>
+            </article>
+            <article class="project">
+              <span class="project__type text-orange">Web · React + Vite</span>
+              <h3 class="project__title">TeamPulse</h3>
+              <p class="project__desc">HR dashboard with org chart, attendance analytics and PNG/SVG export.</p>
+            </article>
+            <article class="project">
+              <span class="project__type text-accent">Web · Next.js</span>
+              <h3 class="project__title">ShopLite</h3>
+              <p class="project__desc">SEO-friendly e-commerce storefront with dark mode and 98 Lighthouse score.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title"><span class="section-title__num">07</span>Education &amp; Certificates</h2>
+
+          <div class="edu">
+            <div class="edu__item">
+              <div>
+                <h3 class="edu__title">BSc in Computer Science</h3>
+                <p class="text-muted">Tbilisi State University</p>
+              </div>
+              <span class="badge">2017 — 2021</span>
+            </div>
+            <div class="edu__item">
+              <div>
+                <h3 class="edu__title">Meta Front-End Developer Certificate</h3>
+                <p class="text-muted">Coursera</p>
+              </div>
+              <span class="badge">2022</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Available for full-time &amp; freelance work <span class="status-dot" aria-hidden="true"></span></p>
+    </footer>
+  </main>
+</body>
+</html>
